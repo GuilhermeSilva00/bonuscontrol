@@ -21,9 +21,15 @@ if($datas){
     $stmt->execute();
 
     if($stmt->rowCount()){
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $response = [
             "status" => 1,
-            "messagem" => "OK"
+            "messagem" => "OK",
+            'id' => $row['id'],
+            'name' => $row['name'],
+            'points' => $row['points'],
+            'email' => $row['email'],
+            'type' => $row['type']
         ];
     }else{
         $response = [
