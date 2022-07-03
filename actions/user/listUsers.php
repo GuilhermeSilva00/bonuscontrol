@@ -19,7 +19,9 @@ if($stmt->rowCount() > 0){
             'id' => $id,
             'name' => $name,
             'active' => $active,
-            'points' => $points
+            'points' => $points,
+            'email' => $email,
+            'type' => $type
         ];
     }
 }
